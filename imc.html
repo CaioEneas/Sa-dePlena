@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="imc.css">
+  <title>Cálculo de IMC</title>
+</head>
+<body>
+    <div class="background-verde">
+  <!-- Cabeçalho da página -->
+  <header>
+    <a href="index.html">Saúde Plena - IMC</a>
+  </header>
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Descubra o seu Índice de Massa Corporal</h2>
+    <!-- Formulário para entrada de dados -->
+    <form onsubmit="calcularIMC(event)">
+      <!-- Campo para inserir o peso -->
+      <input type="number" id="peso" placeholder="Informe seu peso (kg)" required>
+      <!-- Campo para inserir a altura -->
+      <input type="number" id="altura" placeholder="Informe sua altura (m)" step="0.01" required>
+      <!-- Botão para enviar o formulário -->
+      <button type="submit">Calcular IMC</button>
+    </form>
+    <!-- Onde o resultado será exibido -->
+    <div id="resultado" class="resultado" style="display: none;">
+      <h3>Resultado do Cálculo</h3>
+      <!-- Mostra o peso informado -->
+      <p><strong>Peso:</strong> <span id="valorPeso"></span> kg</p>
+      <!-- Mostra a altura informada -->
+      <p><strong>Altura:</strong> <span id="valorAltura"></span> m</p>
+      <!-- Mostra o resultado do IMC  -->
+      <p><strong>Seu IMC:</strong> <span id="imc"></span></p>
+      <!-- Mostra a classificação com base no IMC -->
+      <p><strong>Classificação:</strong> <span id="classificacao"></span></p>
+      <!-- Mensagem personalizada com base no IMC -->
+      <p id="mensagem"></p>
+    </div>
+    </div>
+  </main>
+
+  <!-- footer/rodapé -->
+  <footer>
+    <div class="container">
+        <!-- ul 1-->
+        <ul>
+            <h3>Saúde Plena</h3>
+            <p>Sempre ajudando os clientes a buscarem sua melhor versão.
+            </p>
+            <div class="redes-sociais">
+                <img src="img//facebook.png" alt="facebook">
+                <img src="img//instagram.png" alt="instagram">
+                <img src="img//twitter.png" alt="twitter">
+            </div>
+        </ul>
+        <!-- end ul 1-->
+         <!-- ul 2-->
+        <ul>
+            <h3>Link</h3>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Preços</a></li>
+            <li><a href="#">Baixar</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+        </ul>
+        <!-- end ul 2-->
+         <!-- ul 3-->
+        <ul>
+            <h3>Suporte</h3>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Comunicando</a></li>
+        </ul>
+        <!-- end ul 3-->
+         <!-- ul 4-->
+        <ul>
+            <h3>Nossos contatos</h3>
+            <li>
+                <p>+061 1234-5678</p>
+            </li>
+            <li>
+                <p>saudeplena@gmail.com</p>
+            </li>
+            <li>
+                <p>Brasil</p>
+            </li>
+        </ul>
+        <!-- end ul 4-->
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <script>
+    // Função chamada quando o formulário é enviado
+    function calcularIMC(event) {
+      event.preventDefault(); // "Trava" o recarregamento da página
+
+      // Obtém os valores de peso e altura inseridos pelo usuário
+      const peso = parseFloat(document.getElementById("peso").value);
+      const altura = parseFloat(document.getElementById("altura").value);
+      const resultadoDiv = document.getElementById("resultado"); // Onde o resultado será exibido
+
+      // Calcula o IMC
+      const imc = (peso / (altura * altura)).toFixed(2); // Fórmula do IMC arredondada para 2 casas decimais
+
+      // Define a classificação e a mensagem personalizada com base no IMC
+      let classificacao = "";
+      let mensagem = "";
+
+      //Se for igual a "x", mostrar classificação e mensagem
+      if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+        mensagem = "Você está abaixo do peso ideal. Considere consultar um nutricionista para orientação.";
+      } else if (imc < 24.9) {
+        classificacao = "Peso normal";
+        mensagem = "Parabéns! Você está no peso ideal. Continue mantendo hábitos saudáveis.";
+      } else if (imc < 29.9) {
+        classificacao = "Sobrepeso";
+        mensagem = "Atenção! Você está com sobrepeso. Adotar uma dieta balanceada pode ajudar.";
+      } else if (imc < 34.9) {
+        classificacao = "Obesidade grau 1";
+        mensagem = "Cuidado! Você está na faixa de obesidade grau 1. Procure orientação médica.";
+      } else if (imc < 39.9) {
+        classificacao = "Obesidade grau 2";
+        mensagem = "Alerta! Você está na faixa de obesidade grau 2. É importante buscar ajuda profissional.";
+      } else {
+        classificacao = "Obesidade grau 3";
+        mensagem = "Urgente! Você está na faixa de obesidade grau 3. Consulte um médico com urgência.";
+      }
+
+      // Atualiza os elementos do DOM com os resultados
+      document.getElementById("valorPeso").textContent = peso; // Exibe o peso
+      document.getElementById("valorAltura").textContent = altura; // Exibe a altura
+      document.getElementById("imc").textContent = imc; // Exibe o IMC calculado
+      document.getElementById("classificacao").textContent = classificacao; // Exibe a classificação
+      document.getElementById("mensagem").textContent = mensagem; // Exibe a mensagem personalizada
+
+      // Torna os resultados visíveis
+      resultadoDiv.style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
+
+*{
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove preenchimentos internos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo de largura/altura */
+    text-decoration: none; /* Remove sublinhados de links */
+    list-style: none; /* Remove estilos de listas */
+}
+
+body{
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal do site */
+}
+
+/* Atalhos para usar */
+:root{
+    --verde-escuro: #14424b;
+    --verde: #2f9364;
+    --laranja: #ff7c37;
+    --degrade-btn: linear-gradient(#fe9611, #ff5c00);
+    --color-p: #a1a1a1;
+    --color-p-2: #868585;
+}
+
+.background-verde{
+    background: var(--verde-escuro); /* Fundo verde */
+}
+
+.container{
+    max-width: 1440px; /* Define a largura máxima */
+    padding: 0 5%; /* Adiciona preenchimento horizontal */
+    margin: 0 auto; 
+}
+
+section,
+footer{
+    padding: 2.7rem 0; /* Adiciona espaço vertical */
+
+}
+
+.btn-gradiente{
+    padding: 10px 25px; /* Espaçamento interno */
+    color: white; /* Cor do texto branca */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Curso do mouse */
+    background-image: var(--degrade-btn); /* Cor de fundo da imagem */
+}
+
+/* classes do site */
+nav{
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px 0; /* Espaço vertical e horizontal */
+}
+
+.logo a{
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: white; /* Cor do texto branca */
+}
+
+.ul{
+    display: flex; /* Deixa flexível */
+    align-items: center; /* Alinha os itens no centro */
+}
+
+.ul li{
+    margin: 0 35px; /* Espaçamento horizontal dos itens */
+    font-size: 15px; /* Tamanho da fonte */
+}
+
+.ul li a{
+    color: white; /* Cor do texto branca */
+}
+
+/* main */
+main .container{
+    display: flex; /* Deixa flexível */
+    align-items: center; /* Itens alinhados no centro */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    margin-top: 30px; /* Distância do topo */
+}
+
+.main-text{
+    width: 50%; /* Ocupa 50% do espaço */
+    color: white; /* Cor do texto branca */
+}
+
+.main-text h1{
+    font-size: 3.5rem; /* Tamanho da fonte */
+}
+
+.main-text span{
+    color: var(--laranja); /* Cor do texto laranja */
+}
+
+.main-text div{
+    display: flex; /* Deixa flexível */
+    align-items: center; /* Alinha os itens no centro */
+    margin-top: 20px; /* Distância do topo */
+}
+
+.main-img{
+    width: 50%; /* Ocupa 50% do espaço */
+}
+
+.main-img img{
+    width: 100%; /* Ocupa 100% do espaço */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* ícone de menu */
+
+.menu-icon{
+    display: none; /* Não fica flexível */
+    position: relative; /* Posição relativa do item */
+    z-index: 10; /* Sobreposição do item */
+}
+
+/* resultados */
+.resultados{
+    background: #fa8607; /* Cor de fundo */
+}
+
+.resultados .container{
+    display: flex; /* Torna flexível */
+    align-items: center; /* Alinha os itens no centro */
+    justify-content: space-between; /* Mesmo espaço entre os itens */
+}
+
+.resultados .resultados-text{
+    color: white; /* Cor do texto branca */
+    font-size: 1.6rem; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+    width: 50%; /* Ocupa 50% do espaço */
+}
+
+.resultados .resultados-numero{
+    display: flex; /* Torna flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Alinha os itens horizontalmente */
+    color: white; /* Cor do texto branca */
+}
+
+.resultados .resultados-numero p{
+    text-align: center; /* Texto alinhado */
+    margin: 0 30px; /* Margem horizontal */
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+.resultados .resultados-numero p span{
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+}
+
+/* section diferencias*/
+.diferencias .container{
+    display: flex; /* Torna flexível */
+    justify-content: space-between; /* Alinha horizontalmente */
+    margin: 30px auto; /* Distância da margem */
+}
+
+.diferencias .card{
+    width: 30%; /* Ocupa 30% do espaço */
+    cursor: pointer; /* Cursor do mouse */
+    padding: 30px; /* Espaço vertical e horizontal */
+    border-radius: 15px; /* Bordar arredondada */
+    transition: 0.3s; /* Transição */
+}
+
+.diferencias .card button{
+    padding: 10px 20px;/* Espaço vertical e horizontal */
+    color: white; /* Cor do texto branca */
+    background-color: var(--laranja); /* Cor de fundo */
+    border: none; /* Sem bordas */
+    font-weight: bold; /* Tipo de fonte */
+}
+
+.diferencias .card .treino{
+    margin-top: 50px; /* Distância do topo */
+}
+
+.diferencias .card .dieta{
+    margin-top: 70px; /* Distância do topo */
+}
+
+.diferencias .card button a{
+    color: white; /* Cor do texto branca */
+}
+
+.diferencias .card:hover{
+    box-shadow: 0px 10px 67px 8px #e6e6fa85; /* Sombreamento */
+}
+
+.diferencias .card img{
+        width: 100px;/* Ocupa 100px do espaço */
+}
+
+.diferencias .card .titulo{
+    margin: 13px 0; /* Distância vertical */
+    font-weight: 600; /* Espessura da fonte */
+}
+
+/* section casa */
+.casa .container{
+    display: flex; /* Torna flexível */
+    align-items: center; /* Alinha no centro verticalmente */
+}
+
+.casa .casa-img{
+    width: 50%; /* Ocupa 50% do espaço */
+}
+
+.casa .casa-img img{
+    width: 100%; /* Ocupa 100% do espaço */
+    border-radius: 10px; /* Arredondamento das bordas */
+}
+
+.casa .casa-text{
+    width: 50%; /* Ocupa 50% do espaço */
+    padding-left: 90px; /* Distância do lado esquerdo */
+}
+
+.casa .casa-text h2{
+    font-size: 2.3rem; /* Tamanho da fonte */
+}
+
+.casa .casa-text p{
+    margin: 20px 0; /* Distância vertical */
+    color: var(--color-p); /* Cor do texto */
+}
+
+.casa .casa-text .positivos{
+    color: black; /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+}
+
+.melhores-lugares .azul{
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 600; /* Espessura da fonte */
+    color: #0060f0; /* Cor do texto */
+}
+
+.melhores-lugares h2{
+    font-size: 2rem; /* Tamanho da fonte */
+}
+
+.melhores-lugares .cards{
+    display: flex; /* Torna flexível */
+    justify-content: space-between; /* Espaçamento lateral igual */
+    margin-top: 50px; /* Distância do topo */
+}
+
+.melhores-lugares .cards .card-item{
+    width: 30%; /* Ocupa 30% do espaço */
+    text-align: center; /* Texto alinhado */
+    padding: 30px 0; /* Distância vertical */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0px 3px 97px 15px rgb(0, 0, 0, 0.08); /* Sombreamento */
+}
+
+.melhores-lugares .cards img{
+    width: 85px; /* Ocupa 85px do espaço */
+}
+
+.melhores-lugares .cards a{
+    color: white; /* Cor do texto branca */
+}
+
+.melhores-lugares .cards .local-casa{
+    margin: 5px 0; /* Distância de 5px vertical */
+    color: var(--color-p); /* Cor */
+}
+
+.melhores-lugares .cards .nome-casa{
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: 500; /* Espessura da fonte */
+}
+
+.melhores-lugares .cards .contato{
+    margin-bottom: 20px; /* Espaçamento das margens */
+    color: var(--color-p-2); /* Cor */
+}
+
+.melhores-lugares .cards button{
+    padding: 10px 20px; /* Espaçamento vertiacal e horizontal */
+    color: white; /* Cor do texto branca */
+    background-color: var(--laranja); /* Cor de fundo */
+    border: none; /* Sem bordas */
+    font-weight: bold; /* Tipo de fonte */
+}
+
+/* section saude plena*/
+.saude-plena{
+    margin-top: 50px; /* Distância do topo */
+    background-color: var(--verde); /* Cor de fundo */
+}
+
+.saude-plena .box-inscreva-se{
+    text-align: center; /* Texto alinhado no centro */
+    padding: 100px;/* Espaçamento de 100px */
+    background-image: url(img/background-newsletter.png); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Imagem de fundo não se repete */
+    background-size: cover; /* Imagem de fundo deve cobrir tudo */
+    background-position: center; /* Posição do fundo */
+    border-radius: 15px; /* Arredondamento das bordas */
+}
+
+.saude-plena .box-inscreva-se h2{
+    font-size: 2.5rem; /* Tamanho da fonte */
+}
+
+.saude-plena .box-inscreva-se span{
+    color: var(--verde); /* Cor do texto */
+}
+
+.saude-plena .box-inscreva-se p{
+    margin: 13px 0; /* Espaçamento vertical */
+}
+
+.saude-plena .box-inscreva-se input{
+    width: 35%; /* Ocupa 35% do espaço */
+    padding: 15px; /* Espaçamento vertical */
+    border-radius: 15px; /* Bordas arredondadas */
+    color: #00000098; /* Cor do texto */
+    background-color: #faefda; /* Cor de fundo */
+}
+
+.saude-plena .box-inscreva-se button{
+    font-size: 15px; /* Tamanho da fonte */
+    border: none; /* Sem bordas */
+    outline: none; /* Sem contorno */
+    padding: 15px; /* Espaçamento vertical */
+    border-radius: 14px; /* Borda arredondada */
+    color: white; /* Cor do texto branca */
+    background-color: var(--verde); /* Cor de fundo */
+    cursor: pointer; /* Cursor do mouse */
+}
+/* end section saude plena */
+
+/* footer */
+footer{
+    background-color: var(--verde-escuro); /* Cor de fundo */
+}
+
+footer .container{
+    display: flex; /* Torna flexível*/
+    color: white; /* Cor do texto branca */
+}
+
+footer .container ul{
+    width: 25%; /* Ocupa 25% */
+}
+
+footer .container h3{
+    margin-bottom: 16px; /* Margens do botão */
+    font-weight: 600; /* Espessura da fonte */
+}
+
+footer .container .redes-sociais img{
+    margin-right: 10px; /* Distância da margem direita */
+}
+
+footer .container ul > p{
+    margin-bottom: 40px; /* Margem do botão */
+}
+
+footer .container li{
+    margin: 10px 0; /* Espaçamento vertical entre os itens */
+}
+
+footer .container a{
+    color: white; /* Cor do texto branca */
+}
+
+/* end footer */
+
+/* responsivo (site adapta para telas menores/mobile */
+/* o código só vai ser aplicado quando a tela for menor que 960px !!!! */
+@media (max-width: 960px){ 
+    .menu-icon{
+        display: block;
+    }
+    .ul{
+        position: fixed;
+        background: var(--verde-escuro);
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ul li{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .ul.ativo{
+        left: 0;
+    }
+
+    main .container{
+        flex-direction: column;
+    }
+
+    main .container .main-img,
+    main .container .main-text{
+        width: 100%;
+        align-items: center;
+    }
+
+    main .container .main-text h1{
+        font-size: 3.5rem;
+    }
+
+    main .container .main-text h2{
+        align-items: center;
+    }
+
+    main .container .main-text div{
+        justify-content: center;
+    }
+
+    .resultados .container{
+        flex-direction: column;
+    }
+
+    .resultados .resultados-text,
+    .resultados .resultados-numero{
+        width: 100%;
+        text-align: center;
+    }
+
+    .resultados-numero{
+        margin-top: 30px;
+    }
+
+    .diferencias .container{
+        flex-direction: column;
+    }
+
+    .diferencias .card{
+        width: 100%;
+    }
+
+    .casa .container{
+        flex-direction: column;
+    }
+
+    .casa .casa-text,
+    .casa .casa-img{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .melhores-lugares .cards{
+        flex-direction: column;
+    }
+
+    .melhores-lugares .cards .card-item{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .saude-plena .box-inscreva-se{
+        padding: 50px;
+    }
+
+    .saude-plena .box-inscreva-se h2{
+        font-size: 2rem;
+    }
+
+    .saude-plena .box-inscreva-se input{
+        width: 90%;
+    }
+
+    .saude-plena .box-inscreva-se button{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    footer .container{
+        flex-direction: column;
+    }
+
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 440px){
+    .resultados .resultados-numero{
+        flex-direction: column;
+    }
+
+    main .container .main-text h1{
+        font-size: 3rem;
+    }
+}
